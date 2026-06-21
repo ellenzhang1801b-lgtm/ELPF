@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎来到我的网站</title>
+    <title>我的个人网站</title>
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
             font-family: 'Arial', 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
         }
 
         header {
@@ -44,13 +44,14 @@
         }
 
         .logo img {
-            height: 50px;
+            height: 60px;
             width: auto;
             border-radius: 50%;
+            border: 3px solid white;
         }
 
         .logo h1 {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
         }
 
@@ -59,6 +60,7 @@
             margin-left: 30px;
             text-decoration: none;
             transition: opacity 0.3s;
+            font-size: 16px;
         }
 
         nav a:hover {
@@ -67,49 +69,73 @@
 
         .container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 0 auto;
             padding: 0 20px;
         }
 
         .hero {
             background: white;
-            padding: 60px 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 80px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
-            margin-bottom: 40px;
+            margin: 40px 0;
         }
 
         .hero h2 {
-            font-size: 36px;
+            font-size: 42px;
             color: #667eea;
             margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 20px;
             color: #666;
             line-height: 1.8;
             margin-bottom: 30px;
         }
 
+        .section {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 40px 0;
+        }
+
+        .section h3 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        .section p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-bottom: 40px;
+            margin-top: 40px;
         }
 
         .gallery-item {
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
         }
 
         .gallery-item img {
@@ -119,46 +145,25 @@
         }
 
         .gallery-item-text {
-            padding: 20px;
+            padding: 25px;
         }
 
-        .gallery-item-text h3 {
+        .gallery-item-text h4 {
             color: #667eea;
             margin-bottom: 10px;
+            font-size: 18px;
         }
 
         .gallery-item-text p {
-            color: #666;
+            color: #888;
             font-size: 14px;
         }
 
-        .content-section {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
-
-        .content-section h3 {
-            color: #667eea;
-            font-size: 28px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .content-section p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
         footer {
-            background: #333;
+            background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             margin-top: 60px;
         }
 
@@ -166,39 +171,27 @@
             margin-bottom: 10px;
         }
 
-        .button {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .button:hover {
-            background: #764ba2;
-        }
-
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
             }
 
             nav a {
                 margin-left: 15px;
+                font-size: 14px;
             }
 
             .hero h2 {
-                font-size: 24px;
+                font-size: 28px;
             }
 
             .hero p {
                 font-size: 16px;
+            }
+
+            .section h3 {
+                font-size: 24px;
             }
 
             .gallery {
@@ -211,77 +204,79 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <!-- 将 logo.png 替换为你的Logo文件名 -->
-                <img src="assets/logo.png" alt="Logo">
-                <h1>我的网站</h1>
+                <img src="https://via.placeholder.com/60/667eea/ffffff?text=LOGO" alt="Logo">
+                <h1>我的个人网站</h1>
             </div>
             <nav>
                 <a href="#home">首页</a>
-                <a href="#gallery">图库</a>
-                <a href="#about">关于</a>
+                <a href="#about">关于我</a>
+                <a href="#gallery">作品</a>
                 <a href="#contact">联系</a>
             </nav>
         </div>
     </header>
 
     <div class="container">
+        <!-- 首页/欢迎区 -->
         <section class="hero" id="home">
-            <h2>欢迎来到我的网站</h2>
-            <p>这是一个展示你的作品、分享你的想法和与世界连接的平台。</p>
-            <button class="button">了解更多</button>
+            <h2>欢迎来到我的世界</h2>
+            <p>这是一个展示我的作品和故事的地方</p>
         </section>
 
-        <section class="content-section" id="about">
-            <h3>关于我</h3>
+        <!-- 关于我区 -->
+        <section class="section" id="about">
+            <h3>👋 关于我</h3>
             <p>
-                这里可以写一些关于你自己的介绍。分享你的故事、经历和成就。
-                让访客更好地了解你是谁以及你做了什么。
+                你好！我是一个充满热情的创意工作者。我在这里分享我的作品、想法和经验。
             </p>
             <p>
-                你可以在这里列举你的技能、经验或任何你想让人们知道的重要信息。
+                我专注于创造有意义的内容和设计。如果你对我的作品感兴趣，欢迎随时联系我。
             </p>
         </section>
 
-        <h2 style="text-align: center; color: #667eea; margin-bottom: 40px;" id="gallery">我的作品集</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <!-- 将 image1.jpg 替换为你的图片文件名 -->
-                <img src="assets/image1.jpg" alt="作品1">
-                <div class="gallery-item-text">
-                    <h3>作品标题 1</h3>
-                    <p>这里是作品的简短描述。</p>
+        <!-- 作品展示区 -->
+        <section class="section" id="gallery">
+            <h3>🎨 我的作品</h3>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=作品1" alt="作品1">
+                    <div class="gallery-item-text">
+                        <h4>项目标题一</h4>
+                        <p>这是对第一个项目的简短描述</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/764ba2/ffffff?text=作品2" alt="作品2">
+                    <div class="gallery-item-text">
+                        <h4>项目标题二</h4>
+                        <p>这是对第二个项目的简短描述</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/f093fb/ffffff?text=作品3" alt="作品3">
+                    <div class="gallery-item-text">
+                        <h4>项目标题三</h4>
+                        <p>这是对第三个项目的简短描述</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="gallery-item">
-                <img src="assets/image2.jpg" alt="作品2">
-                <div class="gallery-item-text">
-                    <h3>作品标题 2</h3>
-                    <p>这里是作品的简短描述。</p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="assets/image3.jpg" alt="作品3">
-                <div class="gallery-item-text">
-                    <h3>作品标题 3</h3>
-                    <p>这里是作品的简短描述。</p>
-                </div>
-            </div>
-        </div>
-
-        <section class="content-section" id="contact">
-            <h3>联系我</h3>
-            <p>📧 邮箱：your-email@example.com</p>
-            <p>📱 电话：+86 xxx-xxxx-xxxx</p>
-            <p>🔗 社交媒体：链接</p>
-            <button class="button">发送消息</button>
+        <!-- 联系区 -->
+        <section class="section" id="contact">
+            <h3>📞 联系方式</h3>
+            <p>📧 <strong>邮箱：</strong> your-email@example.com</p>
+            <p>📱 <strong>电话：</strong> +86 138-xxxx-xxxx</p>
+            <p>🔗 <strong>微信：</strong> your-wechat-id</p>
+            <p>📍 <strong>位置：</strong> 中国，城市名称</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 我的网站。保留所有权利。</p>
-        <p>设计精美 | 响应式布局 | 现代化风格</p>
+        <p>&copy; 2024 我的个人网站</p>
+        <p>用心创作 | 与你分享</p>
     </footer>
 </body>
 </html>
